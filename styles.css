@@ -1,131 +1,127 @@
+/* styles.css */
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
 
 * {
-    font-family: 'VCR OSD Mono', sans-serif;
-    color: white
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 .wallpaper {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url(https://images-ext-1.discordapp.net/external/SwU3IetizsnvCmb_FYcdqlsw27u2d8Ie-ZBhCyxtE7k/https/dox.report/wallpaper.gif?width=717&height=430);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url(https://i.ytimg.com/vi/pl-QBuRoANU/maxresdefault_live.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 pre {
     color: #fff;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     border: none;
-    font-size: 10px;
-    
+    font-size: 12px;
+    text-align: center;
 }
 
 .center-screen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.box-brrr {
-    width: calc(47% - 10px);
-    border-radius: 2px;
-    background-color: transparent;
-    padding: 20px;
-    display: block;
-    box-sizing: border-box;
-    margin: 0 5px; 
+    text-align: center;
 }
 
 .box-contain {
     display: flex;
-    margin-top: 1em;
-    width: 500px;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
 }
 
+.box-brrr {
+    width: calc(50% - 10px);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    text-align: center;
+}
 
 .pfp {
     width: 110px;
-    height: auto;
+    height: 110px;
     border-radius: 50%;
-    margin-left: 20px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.pfp:hover {
+    transform: scale(1.05);
 }
 
 .text {
     margin-top: 30px;
-	text-decoration: none;
-	color: #dddddd;
+    color: #dddddd;
     text-align: center;
-	font-size: 12px;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-title {
+    font-size: 12px;
+    margin: 10px 0;
 }
 
 .fade-in-image {
-    animation: fadeIn 3s;
-    -webkit-animation: fadeIn 3s;
-    -moz-animation: fadeIn 3s;
-    -o-animation: fadeIn 3s;
-    -ms-animation: fadeIn 3s;
-  }
-  @keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:1; }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:1; }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:1; }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% { opacity:0; }
-    100% { opacity:1; }
-  }
+    animation: fadeIn 3s ease-in;
+}
 
-  
-  @media (max-width: 600px) {
-    html, body {
-        overflow-x: hidden;
-    }
-    .intial-container {
-        margin-top: 1200px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    }
+@media (max-width: 600px) {
     .box-contain {
         flex-direction: column;
         align-items: center;
     }
     .box-brrr {
-        max-width: 400px;
-    }
-    .box-brrr2 {
+        width: 90%;
         max-width: 400px;
     }
     pre {
         font-size: 14px;
-        overflow-y: auto;
     }
     .text {
-        font-size: 8px;
-        margin-bottom: 150px;
+        font-size: 10px;
     }
 }
